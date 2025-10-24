@@ -22,9 +22,7 @@ const Navigation = () => {
             <Nav.Link as={NavLink} to="/projects" activeClassName="active">
               Projects
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/about" activeClassName="active">
-              About
-            </Nav.Link>
+            
           </Nav>
         </Navbar.Collapse>
       </Container>
