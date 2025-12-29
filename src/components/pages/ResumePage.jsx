@@ -4,7 +4,7 @@ function Resume() {
   return (
       <div style={{ display: 'flex', justifyContent: 'center', padding: '20px' }}>
         <img 
-          src="/resumePic.png" 
+          src="/Resume_CV_png.png" 
           alt="Resume"
           style={{ maxWidth: '100%', height: 'auto' }}
         />
