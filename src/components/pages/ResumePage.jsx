@@ -2,11 +2,12 @@ import React from 'react';
 
 function Resume() {
   return (
-      <div>
+      <div style={{ display: 'flex', justifyContent: 'center', padding: '20px' }}>
         <img 
-  src="/resumePic.png" 
-  alt="Resume"
-></img>
+          src="/resumePic.png" 
+          alt="Resume"
+          style={{ maxWidth: '100%', height: 'auto' }}
+        />
       </div>
   );
 }

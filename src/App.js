@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/pages/HomePage';
-import About from './components/pages/AboutPage';
+
 import Resume from './components/pages/ResumePage';
 import Projects from './components/pages/ProjectsPage';
 import Header from './components/common/Header';
@@ -16,7 +16,6 @@ function App() {
       <MainContent>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>

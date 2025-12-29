@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
-import { Modal, Box } from '@mui/material';
+import { Modal, Box, Skeleton, CircularProgress } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
@@ -18,8 +18,30 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
+const SliderImage = ({ url, alt }) => {
+  const [loaded, setLoaded] = React.useState(false);
+
+  return (
+    <div style={{ height: '70vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      {!loaded && <CircularProgress />}
+      <img
+        src={url}
+        alt={alt}
+        onLoad={() => setLoaded(true)}
+        style={{
+          width: '100%',
+          maxHeight: '70vh',
+          objectFit: 'contain',
+          display: loaded ? 'block' : 'none'
+        }}
+      />
+    </div>
+  );
+};
+
 export default function MultiActionAreaCard({ title,Git, description, mainImageUrl, imageUrls }) {
-   
+   const [imageLoaded, setImageLoaded] = React.useState(false);
+
    const Arrow = ({ direction, onClick }) => (
     <IconButton
       onClick={onClick}
@@ -78,11 +100,14 @@ export default function MultiActionAreaCard({ title,Git, description, mainImageU
     <>
       <Card sx={{ maxWidth: 250 }}>
       <CardActionArea onClick={handleOpen}>
+        {!imageLoaded && <Skeleton variant="rectangular" height={200} animation="wave" />}
         <CardMedia 
           component="img"
           height="200"
           image={mainImageUrl}
           alt={title}
+          onLoad={() => setImageLoaded(true)}
+          sx={{ display: imageLoaded ? 'block' : 'none' }}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -128,14 +153,7 @@ export default function MultiActionAreaCard({ title,Git, description, mainImageU
             <Slider {...sliderSettings}>
               {imageUrls?.map((url, index) => (
                 <div key={index}>
-                  <img
-                    src={url}
-                    alt={`${title} screenshot ${index + 1}`}
-                    style={{
-                      width: '100%',
-                      maxHeight: '70vh',
-                      objectFit: 'contain'
-                    }} />
+                  <SliderImage url={url} alt={`${title} screenshot ${index + 1}`} />
                 </div>
               ))}
             </Slider>
