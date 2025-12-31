@@ -14,7 +14,8 @@ function Projects() {
       id: 1,
       title: 'HabitHub',
       Git: 'https://github.com/nabehkallas/HabitHub',
-      description: 'preview:https://expo.dev/accounts/nabeh_kallas/projects/HabitHub/builds/ea718a49-0088-470a-a590-9ec63cfa1d10\n\nHabitHub is a sophisticated, cross-platform mobile application built with React Native (Expo). It is designed to help users bridge the gap between daily habit tracking and financial goals, allowing them to visualize how small lifestyle changes contribute to monthly savings.',
+      description: "HabitHub is a sophisticated, cross-platform mobile application built with React Native (Expo). It is designed to help users bridge the gap between daily habit tracking and financial goals, allowing them to visualize how small lifestyle changes contribute to monthly savings.",
+      previewUrl: 'https://expo.dev/accounts/nabeh_kallas/projects/HabitHub/builds/ea718a49-0088-470a-a590-9ec63cfa1d10',
       mainImageUrl: 'HabitHub/HabitHub_Logo.png', // Placeholder image
       imageUrls: ['HabitHub/GIF_1.GIF', 'HabitHub/GIF_2.GIF', 'HabitHub/GIF_3.GIF']
     },
@@ -68,6 +69,7 @@ function Projects() {
               description={project.description}
               mainImageUrl={project.mainImageUrl}
                imageUrls={project.imageUrls}
+               previewUrl={project.previewUrl?project.previewUrl:null}
             />
           </Grid>
         ))}

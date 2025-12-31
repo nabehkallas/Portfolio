@@ -14,6 +14,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Slider from 'react-slick';
 
+
 // Import slick-carousel styles
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -39,7 +40,7 @@ const SliderImage = ({ url, alt }) => {
   );
 };
 
-export default function MultiActionAreaCard({ title,Git, description, mainImageUrl, imageUrls }) {
+export default function MultiActionAreaCard({ title,Git, description, mainImageUrl, imageUrls,previewUrl }) {
    const [imageLoaded, setImageLoaded] = React.useState(false);
 
    const Arrow = ({ direction, onClick }) => (
@@ -165,6 +166,9 @@ export default function MultiActionAreaCard({ title,Git, description, mainImageU
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               {description}
             </Typography>
+            {previewUrl?<a href={previewUrl}>
+              {previewUrl}
+            </a>:null}
           </Grid>
         </Grid>
       </Box>
