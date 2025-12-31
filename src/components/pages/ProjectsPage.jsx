@@ -14,7 +14,7 @@ function Projects() {
       id: 1,
       title: 'HabitHub',
       Git: 'https://github.com/nabehkallas/HabitHub',
-      description: 'HabitHub is a sophisticated, cross-platform mobile application built with React Native (Expo). It is designed to help users bridge the gap between daily habit tracking and financial goals, allowing them to visualize how small lifestyle changes contribute to monthly savings.',
+      description: 'preview:https://expo.dev/accounts/nabeh_kallas/projects/HabitHub/builds/ea718a49-0088-470a-a590-9ec63cfa1d10\n\nHabitHub is a sophisticated, cross-platform mobile application built with React Native (Expo). It is designed to help users bridge the gap between daily habit tracking and financial goals, allowing them to visualize how small lifestyle changes contribute to monthly savings.',
       mainImageUrl: 'HabitHub/HabitHub_Logo.png', // Placeholder image
       imageUrls: ['HabitHub/GIF_1.GIF', 'HabitHub/GIF_2.GIF', 'HabitHub/GIF_3.GIF']
     },
