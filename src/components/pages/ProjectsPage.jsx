@@ -9,9 +9,16 @@ function Projects() {
 
   
   const projectsData = [
-   
-    {
+     {
       id: 1,
+      title: 'Full-Stack Dating App',
+      Git: 'https://github.com/nabehkallas/Dating',
+      description: "This is a feature-rich dating application designed for performance and scalability. It combines the smooth cross-platform UI of React Native Expo with robust backend logic handled by Laravel, and leverages Firebase (Firestore, Auth) as the primary data store.The architecture is designed for speed: while Laravel handles complex querying (like geospatial distance calculations), latency-sensitive features like real-time chat and media uploading bypass the intermediate server and connect directly to Firebase and Cloudinary from the client.",
+      mainImageUrl: 'Dating/Dating.png', // Placeholder image
+      imageUrls: ['Dating/1.gif', 'Dating/2.gif', 'Dating/3.gif']
+    },
+    {
+      id: 2,
       title: 'HabitHub',
       Git: 'https://github.com/nabehkallas/HabitHub',
       description: "HabitHub is a sophisticated, cross-platform mobile application built with React Native (Expo). It is designed to help users bridge the gap between daily habit tracking and financial goals, allowing them to visualize how small lifestyle changes contribute to monthly savings.",
@@ -20,7 +27,7 @@ function Projects() {
       imageUrls: ['HabitHub/GIF_1.GIF', 'HabitHub/GIF_2.GIF', 'HabitHub/GIF_3.GIF']
     },
     {
-      id: 2,
+      id: 3,
       title: 'BloggerMarket',
       Git: 'https://github.com/nabehkallas/BloggerMarket',
       description: 'is a high-performance mobile marketplace built with React Native (Expo). It serves as a proof-of-concept for a creator-economy platform, allowing users to discover bloggers, view transparent video pricing, and access exclusive promotional offers. The project demonstrates advanced frontend patterns including Server-State Management, Optimized Search, and Custom Navigation.',
@@ -28,7 +35,7 @@ function Projects() {
       imageUrls: ['GIF_1.gif', 'GIF_2.gif', 'GIF_3.gif']
     }
     , {
-      id: 3,
+      id: 4,
       title: 'Dalelak',
       Git: 'https://github.com/nabehkallas/RealEstate-ReactNative',
       description: 'Dalelak is an application that is both Real estate and car trading app, products in this app are uploaded by admin only, it have a good search filter and user communucation feautere, made with react native for the frontend and laravel for the backend ',
@@ -36,13 +43,14 @@ function Projects() {
       imageUrls: ['Project-1//1.jpg', 'Project-1//2.jpg', 'Project-1//3.jpg', 'Project-1//4.jpg', 'Project-1//5.jpg']
     },
     {
-      id: 4,
+      id: 5,
       title: 'Dalelak Dashboard',
       Git: 'https://github.com/nabehkallas/AdminPanel-Laravel10_New',
       description: 'This is the Laravel Bacjend And Dashboard for Dalelak App',
       mainImageUrl: 'Project-2/main-2.webp', // Placeholder image
       imageUrls: ['Project-2/1.png', 'Project-2/2.png', 'Project-2/3.png', 'Project-2/4.png', 'Project-2/5.png']
     },
+  
   ];
   
 

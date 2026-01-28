@@ -30,6 +30,7 @@ function Home() {
 
   const [isGmailHovered, setIsGmailHovered] = React.useState(false);
   const [isGithubHovered, setIsGithubHovered] = React.useState(false);
+  const [isLinkedInHovered, setIsLinkedInHovered] = React.useState(false);
 
   return (
     <div>
@@ -53,6 +54,13 @@ function Home() {
              onMouseEnter={() => setIsGithubHovered(true)}
              onMouseLeave={() => setIsGithubHovered(false)}
           >GitHub</a>
+          <a href="https://www.linkedin.com/in/nabeh-kallas-5aa31a2b0/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             style={{textDecoration: 'none', color: isLinkedInHovered ? '#007bff' : '#666666', margin: '0 10px', fontSize: '1.2rem'}}
+             onMouseEnter={() => setIsLinkedInHovered(true)}
+             onMouseLeave={() => setIsLinkedInHovered(false)}
+          >LinkedIn</a>
           </div>
     </div>
   );
